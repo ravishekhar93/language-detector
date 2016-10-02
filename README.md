@@ -42,12 +42,16 @@ Better algorithm for ignoring comments, strings etc.
 During Initialization (When Constructor is called):
 The program recieves the list of keywords for each language, specified in langspec/config/languageList.txt
 The List for each language is presenet as a seperate text file in /langspec
-A dictionary keeps them.
+A dictionary* keeps them.
 
 Now, When a user inputs the Input File Name. The program extracts tokens from it. And compares it with the dictionary. The language which gets highest hits, gets returned as the answer.
 
 In addition, before Dictionary comaprison, an intital attempt is been made to search common patterns. Whose results are returned as weights to respective languages.
 
+===Data Structure===========================================
+
+*Dictionary: A Linked Hash map with Reserved Keywords as Key, and an Array List as a Value;
+ArrayList contain boolean values. Which essentially describes, which language(s) this keyword belongs to.
 
 
 
